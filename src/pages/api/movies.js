@@ -1,4 +1,4 @@
-import clientPromise from "../../lib/mongodb";
+import clientPromise from "../../../lib/mongodb";
 
 export default async (req, res) => {
    try {
@@ -9,7 +9,7 @@ export default async (req, res) => {
            .collection("movies")
            .find({})
            .sort({ metacritic: -1 })
-           .limit(10)
+           .limit(20)
            .toArray();
 
        res.json(movies);
