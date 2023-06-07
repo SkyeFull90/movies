@@ -5,8 +5,9 @@ export default function Movies ({ movies }) {
         <div>
             <h1>Top 20 Movies of All Time</h1>
             <p>
-                <small>(According to Metacritic)</small>
+              (According to Metacritic)
             </p>
+            
             <ul>
                 {movies.map((movie) => (
                     <li>
