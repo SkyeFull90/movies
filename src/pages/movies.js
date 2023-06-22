@@ -3,8 +3,20 @@ import clientPromise from "../../lib/mongodb";
 export default function Movies ({ movies }) {
     return (
         <div className="py-10 px-10">
-            <h1>Top 20 Movies of All Time</h1>
-            <p>(According to Metacritic)</p>
+             <div className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex flex-wrap sm:items-center sm:space-y-0 sm:space-x-6">
+                <img className="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="https://images.unsplash.com/photo-1685810062916-f14fdc0bfa64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt=" road" />
+                <div className="text-center space-y-2 sm:text-left">
+                    <div className="space-y-0.5">
+                    <p className="text-lg text-black font-semibold">
+                        Top 20 Movies of All Time
+                    </p>
+                    <p className="text-slate-500 font-medium">
+                        (According to Metacritic)
+                    </p>
+                    </div>
+                </div>
+            </div> 
+            
             <div className="py-10 px-10">
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {movies.map((movie) => (
